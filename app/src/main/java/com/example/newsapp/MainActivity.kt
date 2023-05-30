@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val API_KEY = "f84d5717585f4b6a9a4ba3acab6d1ce5"
         private const val KEYWORD = "keyword"
+        private const val COUNTRY = "id"
     }
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://newsapi.org/v2/")
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchDataFromApi(binding: ActivityMainBinding) {
         CoroutineScope(Dispatchers.IO).launch {
-            val response = newsApiService.getNews(KEYWORD, API_KEY)
+            val response = newsApiService.getAllNews(KEYWORD, API_KEY)
             if (response.isSuccessful) {
                 val newsResponse = response.body()
                 val newsList = ArrayList(newsResponse?.articles ?: emptyList())

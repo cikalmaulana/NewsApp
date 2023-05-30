@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_news"
+        android:textSize="24sp"
+        android:textColor="@color/dark_blue"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_news"
