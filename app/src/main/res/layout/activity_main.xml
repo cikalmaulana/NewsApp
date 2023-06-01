@@ -129,6 +129,14 @@
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"/>
 
+        <ProgressBar
+            android:id="@+id/loadingSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_marginTop="50dp"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_news"
             android:layout_width="match_parent"

@@ -5,3 +5,4 @@ data class NewsResponse(
     val totalResults: Int,
     val articles: List<NewsItem>
 )
+

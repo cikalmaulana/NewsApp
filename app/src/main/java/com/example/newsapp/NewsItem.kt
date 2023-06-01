@@ -8,3 +8,4 @@ data class NewsItem(
     val publishedAt: String,
     val urlToImage: String
 )
+
